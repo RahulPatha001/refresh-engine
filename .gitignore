@@ -1,0 +1,66 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables
+
+.env
+.env.*
+*.env
+
+# Logs
+
+*.log
+
+# Playwright / Browser Data (IMPORTANT)
+
+user_data/
+
+# Screenshots / Debug Files
+
+*.png
+*.jpg
+*.jpeg
+
+# OS Files
+
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python Packaging
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / Coverage
+
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# Misc
+
+*.bak
+*.tmp
