@@ -55,7 +55,7 @@ def update_profile(page):
     human_delay(3, 5)
 
     if "profile" not in page.url.lower():
-        raise Exception("❌ Failed to navigate to profile page")
+        raise Exception("Failed to navigate to profile page")
 
     logging.info("Clicking pencil icon next to name...")
     clicked = False
@@ -65,7 +65,7 @@ def update_profile(page):
             if loc.count() > 0:
                 loc.scroll_into_view_if_needed()
                 loc.click()
-                logging.info(f"✅ Clicked pencil: {selector}")
+                logging.info(f"Clicked pencil: {selector}")
                 clicked = True
                 break
         except Exception:
@@ -80,14 +80,14 @@ def update_profile(page):
                 parent.querySelector('svg,[class*="edit"],[class*="pencil"]').click();
             }
         """)
-        logging.info("✅ Clicked pencil via JS")
+        logging.info("Clicked pencil via JS")
 
     logging.info("Waiting for resume headline form...")
     human_delay(2, 3)
 
     save_btn = page.locator('form[name="resumeHeadlineForm"] button[type="submit"]')
     save_btn.wait_for(state="visible", timeout=15000)
-    logging.info("✅ Save button found!")
+    logging.info("Save button found!")
 
     try:
         textarea = page.locator('textarea#resumeHeadlineTxt')
@@ -103,7 +103,7 @@ def update_profile(page):
     save_btn.click()
     human_delay(2, 3)
     page.screenshot(path="debug_after_save.png")
-    logging.info("✅ Profile updated successfully!")
+    logging.info("Profile updated successfully!")
 
 
 def run():
